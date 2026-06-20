@@ -1,0 +1,11 @@
+/* Marketing site uses Claude Design's pure-CSS handoff (tokens + sections +
+   responsive). Tailwind is intentionally NOT imported here — its Preflight
+   reset would override the design's typography and reset rules. The Tailwind
+   dependency stays in package.json so we can opt in for future routes that
+   want utility classes, by importing from a separate stylesheet. */
+
+@import './design/styles.css';
+@import './design/sections.css';
+@import './design/sections2.css';
+@import './design/legal.css';
+@import './design/about.css';
