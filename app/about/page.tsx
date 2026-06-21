@@ -24,7 +24,7 @@ export default function AboutPage() {
               Hi — I&apos;m Mak. <span className="serif red">Here&apos;s why we built this.</span>
             </h1>
             <p className="lede reveal" data-d="2">
-              My brothers and I started KashKit because the options for college students who needed $50 between paychecks were genuinely bad. So we built a Texas-licensed loan product capped at $75, with every dollar disclosed up front, and a tier ladder that rewards paying on time instead of punishing being broke.
+              My brothers and I started KashKit because the options for college students who needed $50 between paychecks were genuinely bad. So we built a Texas-licensed loan product capped at $100, with every dollar disclosed up front, and a tier ladder that rewards paying on time instead of punishing being broke.
             </p>
           </div>
         </section>
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <article className="principle-card reveal" data-d="3">
                 <div className="p-num">04</div>
                 <h3>Pay on time, unlock more.</h3>
-                <p>$25 → $50 → $75 as you build a clean history. We&apos;d rather lend you the right amount as your record grows than push the max up front.</p>
+                <p>$25 → $50 → $100 as you build a clean history. We&apos;d rather lend you the right amount as your record grows than push the max up front.</p>
               </article>
             </div>
           </div>

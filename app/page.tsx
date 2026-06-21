@@ -17,7 +17,7 @@ export default function HomePage() {
             <div className="hero-copy">
               <span className="pulse-pill reveal"><span className="pulse-dot"></span>Now onboarding · Texas-licensed</span>
               <h1 className="reveal" data-d="1">Small loans,<span className="serif red">made for students.</span></h1>
-              <p className="hero-sub reveal" data-d="2">Verify your .edu, link your bank, get $25 to $75 in minutes. No hidden fees. No surprises. You see every dollar you&apos;ll owe before you sign.</p>
+              <p className="hero-sub reveal" data-d="2">Verify your .edu, link your bank, get $25 to $100 in minutes. No hidden fees. No surprises. You see every dollar you&apos;ll owe before you sign.</p>
               <div className="hero-actions reveal" data-d="2">
                 <a className="btn btn-red" href="#waitlist" data-magnetic>Join the waitlist <span className="arrow">→</span></a>
                 <a className="btn btn-ghost" href="#how">How it works</a>
@@ -141,7 +141,7 @@ export default function HomePage() {
               <article className="step-card accent-emerald reveal" data-d="3">
                 <span className="bg-num">03</span><span className="blob-corner"></span>
                 <div className="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2c0-1 .9-1.7 2.5-1.7s2.5.8 2.5 1.9c0 2.4-5 1.6-5 4 0 1.1 1 1.9 2.5 1.9s2.5-.7 2.5-1.7"/></svg></div>
-                <h3>Borrow $25–$75</h3>
+                <h3>Borrow $25–$100</h3>
                 <p>Pick your amount and repayment plan. Funds land in 1–3 days. Pay on time, unlock more.</p>
                 <span className="step-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>1–3 days</span>
               </article>
@@ -162,7 +162,7 @@ export default function HomePage() {
                 <div className="product-head"><span className="product-tier">Tier 1</span></div>
                 <div className="product-amt">$25</div>
                 <div className="product-opts">
-                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$30</div><div className="opt-s">due in 30 days</div></div>
+                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$31</div><div className="opt-s">due in 30 days</div></div>
                   <div className="opt"><div className="opt-k">Biweekly</div><div className="opt-v">2 × $15</div><div className="opt-s">over 30 days</div></div>
                 </div>
                 <div className="product-foot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Best for a first loan</div>
@@ -173,23 +173,23 @@ export default function HomePage() {
                 <div className="product-head"><span className="product-tier">Tier 2</span></div>
                 <div className="product-amt">$50</div>
                 <div className="product-opts">
-                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$57</div><div className="opt-s">due in 30 days</div></div>
-                  <div className="opt"><div className="opt-k">Biweekly</div><div className="opt-v">2 × $28.50</div><div className="opt-s">over 30 days</div></div>
+                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$57.25</div><div className="opt-s">due in 30 days</div></div>
+                  <div className="opt"><div className="opt-k">Biweekly</div><div className="opt-v">2 × $28.13</div><div className="opt-s">over 30 days</div></div>
                 </div>
                 <div className="product-foot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Covers the week&apos;s gap</div>
               </article>
 
               <article className="product-card accent-ink reveal" data-d="3" style={{ ['--accent' as string]: 'var(--ink)' } as React.CSSProperties}>
                 <div className="product-head"><span className="product-tier">Tier 3</span></div>
-                <div className="product-amt">$75</div>
+                <div className="product-amt">$100</div>
                 <div className="product-opts">
-                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$85</div><div className="opt-s">due in 30 days</div></div>
-                  <div className="opt"><div className="opt-k">Biweekly</div><div className="opt-v">2 × $42.50</div><div className="opt-s">over 30 days</div></div>
+                  <div className="opt"><div className="opt-k">Single</div><div className="opt-v">$113.50</div><div className="opt-s">due in 30 days</div></div>
+                  <div className="opt"><div className="opt-k">Biweekly</div><div className="opt-v">2 × $56.25</div><div className="opt-s">over 30 days</div></div>
                 </div>
                 <div className="product-foot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Unlocked after on-time history</div>
               </article>
             </div>
-            <p className="tila">Example: borrow $50, repay $57 in 30 days. Late fee is 5% of the scheduled payment after a 10-day grace period — never a flat charge. NMLS #2780724 · OCCC #2780724.</p>
+            <p className="tila">Example: borrow $100, repay $113.50 in 30 days. Acquisition fee + $1 flat interest. Late fee is 5% of the scheduled payment after a 10-day grace period — never a flat charge. NMLS #2780724 · OCCC #2780724.</p>
           </div>
         </section>
 
@@ -227,7 +227,7 @@ export default function HomePage() {
                 <div className="faq-panel" data-panel="4">
                   <span className="eyebrow red">Loan sizes</span>
                   <h3>Small amounts you can pay back.</h3>
-                  <p>We&apos;re not trying to put you in a debt cycle — we&apos;re trying to get you through the week without overdraft fees. $25 to $75 covers the real gaps: gas, groceries, a textbook. Pay it back on time and your tier grows with you.</p>
+                  <p>We&apos;re not trying to put you in a debt cycle — we&apos;re trying to get you through the week without overdraft fees. $25 to $100 covers the real gaps: gas, groceries, a textbook. Pay it back on time and your tier grows with you.</p>
                 </div>
                 <div className="faq-panel" data-panel="5">
                   <span className="eyebrow amber">Eligibility</span>

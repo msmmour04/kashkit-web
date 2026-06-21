@@ -19,7 +19,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: { default: 'KashKit — Small loans, made for students.', template: '%s · KashKit' },
   description:
-    'A Texas-licensed micro-lender built for college students. Verify your .edu, link your bank, get $25–$75 in minutes. No hidden fees, no surprises.',
+    'A Texas-licensed micro-lender built for college students. Verify your .edu, link your bank, get $25–$100 in minutes. No hidden fees, no surprises.',
   applicationName: 'KashKit',
   metadataBase: new URL('https://kashkit.us'),
   alternates: { canonical: '/' },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'KashKit — Small loans, made for students.',
-    description: 'Verify your .edu, link your bank, get $25–$75 in minutes. No hidden fees.',
+    description: 'Verify your .edu, link your bank, get $25–$100 in minutes. No hidden fees.',
     url: 'https://kashkit.us',
     siteName: 'KashKit',
     locale: 'en_US',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'KashKit — Small loans, made for students.',
-    description: 'Verify your .edu, link your bank, get $25–$75 in minutes. No hidden fees.',
+    description: 'Verify your .edu, link your bank, get $25–$100 in minutes. No hidden fees.',
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   formatDetection: { telephone: false },

@@ -73,7 +73,7 @@ export default async function Image() {
             made for students.
           </div>
           <div style={{ display: 'flex', color: '#6E6B66', fontSize: 30, fontWeight: 500, marginTop: 30, maxWidth: 880 }}>
-            Verify your .edu, link your bank, get $25 to $75 in minutes. No hidden fees.
+            Verify your .edu, link your bank, get $25 to $100 in minutes. No hidden fees.
           </div>
         </div>
 

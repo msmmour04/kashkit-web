@@ -52,7 +52,7 @@ export function Hero() {
               variants={RISE}
               className="mt-7 max-w-xl text-[17px] md:text-[19px] leading-[1.55] text-muted font-medium"
             >
-              Verify your .edu, link your bank, get <span className="text-ink font-bold">$25 to $75</span> in minutes.
+              Verify your .edu, link your bank, get <span className="text-ink font-bold">$25 to $100</span> in minutes.
               No hidden fees. No surprises. You see every dollar you'll owe before you sign.
             </motion.p>
 

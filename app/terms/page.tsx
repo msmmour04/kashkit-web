@@ -46,7 +46,7 @@ export default function TermsPage() {
 
             <h2>3. Loan products</h2>
             <p>
-              KashKit offers small consumer loans of $25, $50, or $75 with single-payment (30-day) or
+              KashKit offers small consumer loans of $25, $50, or $100 with single-payment (30-day) or
               biweekly repayment schedules. Every loan&apos;s total cost — including any acquisition fee,
               interest, and finance charge — is disclosed before signing in your TILA statement, as
               required by federal Truth in Lending Act regulations.
@@ -63,7 +63,7 @@ export default function TermsPage() {
             <h2>5. Tier system</h2>
             <p>
               New borrowers begin at Tier 1 ($25 maximum). Successful on-time repayment unlocks Tier 2
-              ($50) and Tier 3 ($75). Tier increases are not guaranteed and may be revoked for missed
+              ($50) and Tier 3 ($100). Tier increases are not guaranteed and may be revoked for missed
               payments, suspected fraud, or other risk factors at our discretion.
             </p>
 
