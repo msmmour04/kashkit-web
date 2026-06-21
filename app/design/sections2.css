@@ -33,6 +33,28 @@
   padding: 11px 22px;
   border-radius: 999px;
   white-space: nowrap;
+  position: relative;
+}
+
+/* UTSA — the home school. Solid brand red + animated pulse ring. */
+.school-pill.utsa-home {
+  background: var(--red) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(231, 53, 44, 0.32);
+}
+.school-pill.utsa-home::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 999px;
+  border: 2px solid var(--red);
+  opacity: 0.5;
+  animation: utsaPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes utsaPulse {
+  0%   { transform: scale(0.95); opacity: 0.7; }
+  100% { transform: scale(1.18); opacity: 0; }
 }
 
 /* ===== How it works ===== */

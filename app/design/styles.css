@@ -84,6 +84,50 @@ input, textarea { font-family: inherit; }
   padding-inline: var(--gutter);
 }
 
+/* App Store "Coming soon" badge — Apple-style pill, dimmed until launch.
+   Add data-active="true" to enable (and wrap in <a href="https://apps.apple.com/..."> when live). */
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 14px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  opacity: 0.55;
+  cursor: default;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  position: relative;
+  flex: none;
+}
+.appstore-badge[data-active="true"] {
+  opacity: 1;
+  cursor: pointer;
+}
+.appstore-badge[data-active="true"]:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.appstore-badge svg { width: 28px; height: 28px; flex: none; }
+.appstore-badge .as-lines { display: flex; flex-direction: column; line-height: 1.05; }
+.appstore-badge .as-eyebrow { font-size: 10px; font-weight: 600; opacity: 0.75; letter-spacing: 0.02em; }
+.appstore-badge .as-title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
+.appstore-badge .as-soon {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  margin-left: 4px;
+}
+.appstore-badge[data-active="true"] .as-soon { display: none; }
+
 /* Brand mark — used in the header (28px) and the footer (32px) next to the wordmark.
    `.brand` is the linked lockup; `.brand-mark` is the icon; `.brand-wordmark` is the type. */
 .brand {
