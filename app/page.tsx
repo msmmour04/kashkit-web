@@ -3,9 +3,105 @@ import { WaitlistForm } from '@/components/site/WaitlistForm';
 import { Header } from '@/components/site/Header';
 import { Footer } from '@/components/site/Footer';
 
+/**
+ * Homepage-only JSON-LD: FAQPage (so Google can show the FAQ answers as an
+ * expandable accordion in search results) + LoanOrCredit (Tier 1/2/3 products
+ * with up-front total cost). Org schema is in layout.tsx.
+ */
+const homeJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://kashkit.us/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Are there any hidden fees?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. The only charges you pay are the acquisition fee ($5 on a $25 loan, $6.25 on a $50 loan, $12.50 on a $100 loan), and for single-payment loans only a flat $1 interest charge. No handling fees, no monthly maintenance, no processing fees, no prepayment penalty. All fees are disclosed in your TILA statement before signing, per Texas Finance Code Chapter 342, Subchapter F (§§ 342.252–342.256). Late fee is 5% of the scheduled payment after a 10-day grace period (§ 342.259).',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Will applying for a KashKit loan hurt my credit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No hard credit check. Applying for a KashKit loan never lowers your credit score. We verify enrollment and your linked bank account — that’s the entire approval check.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if I pay late?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You get a 10-day grace period after the due date with no penalty. After day 10, the late fee is 5% of the scheduled payment — never a flat dollar charge, never compounding.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is my bank info safe?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bank linking uses Stripe Financial Connections — read-only, bank-grade encrypted. We never see or store your bank login. You can disconnect from the app in one tap.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why are the loans so small?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Small amounts you can actually pay back. $25 to $100 covers the real gaps for students — gas, groceries, a textbook — without putting you in a debt cycle. Higher tiers unlock as you build a clean on-time record.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Who can sign up for KashKit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Enrolled students at a participating Texas university with a valid .edu email, a US checking account, and at least 18 years old. We onboard schools one at a time.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'LoanOrCredit',
+      name: 'KashKit Tier 1 — $25',
+      provider: { '@id': 'https://kashkit.us/#org' },
+      amount: { '@type': 'MonetaryAmount', currency: 'USD', value: 25 },
+      loanTerm: { '@type': 'QuantitativeValue', unitCode: 'DAY', value: 30 },
+      requiredCollateral: 'None',
+      areaServed: 'Texas',
+    },
+    {
+      '@type': 'LoanOrCredit',
+      name: 'KashKit Tier 2 — $50',
+      provider: { '@id': 'https://kashkit.us/#org' },
+      amount: { '@type': 'MonetaryAmount', currency: 'USD', value: 50 },
+      loanTerm: { '@type': 'QuantitativeValue', unitCode: 'DAY', value: 30 },
+      requiredCollateral: 'None',
+      areaServed: 'Texas',
+    },
+    {
+      '@type': 'LoanOrCredit',
+      name: 'KashKit Tier 3 — $100',
+      provider: { '@id': 'https://kashkit.us/#org' },
+      amount: { '@type': 'MonetaryAmount', currency: 'USD', value: 100 },
+      loanTerm: { '@type': 'QuantitativeValue', unitCode: 'DAY', value: 30 },
+      requiredCollateral: 'None',
+      areaServed: 'Texas',
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <Header />
       <main id="top">
 
@@ -21,6 +117,13 @@ export default function HomePage() {
               <div className="hero-actions reveal" data-d="2">
                 <a className="btn btn-red" href="#waitlist" data-magnetic>Join the waitlist <span className="arrow">→</span></a>
                 <a className="btn btn-ghost" href="#how">How it works</a>
+              </div>
+              <div className="stat-strip reveal" data-d="3">
+                <div className="stat"><div className="num"><span data-count="5">0</span> min</div><div className="lbl">Approval</div></div>
+                <div className="stat"><div className="num"><span data-count="0" data-prefix="$">$0</span></div><div className="lbl">Hidden fees</div></div>
+                <div className="stat"><div className="num"><span data-count="100" data-suffix="%">0%</span></div><div className="lbl">Transparent</div></div>
+              </div>
+              <div className="reveal" data-d="3" style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
                 <span className="appstore-badge" aria-label="Download on the App Store — coming soon">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 12.04c-.03-3.02 2.47-4.47 2.58-4.54-1.41-2.06-3.6-2.34-4.38-2.37-1.86-.19-3.64 1.1-4.58 1.1-.96 0-2.4-1.08-3.96-1.05-2.03.03-3.92 1.18-4.97 3-2.12 3.69-.54 9.13 1.52 12.12 1.01 1.47 2.21 3.12 3.79 3.06 1.52-.06 2.1-.99 3.94-.99 1.83 0 2.36.99 3.97.96 1.64-.03 2.68-1.49 3.68-2.97 1.16-1.7 1.64-3.36 1.66-3.44-.04-.02-3.18-1.22-3.21-4.84zM14 4.18c.82-1 1.38-2.39 1.23-3.78-1.18.05-2.65.79-3.5 1.77-.76.87-1.43 2.29-1.25 3.65 1.33.1 2.69-.67 3.52-1.64z"/></svg>
                   <span className="as-lines">
@@ -29,11 +132,7 @@ export default function HomePage() {
                   </span>
                   <span className="as-soon">Soon</span>
                 </span>
-              </div>
-              <div className="stat-strip reveal" data-d="3">
-                <div className="stat"><div className="num"><span data-count="5">0</span> min</div><div className="lbl">Approval</div></div>
-                <div className="stat"><div className="num"><span data-count="0" data-prefix="$">$0</span></div><div className="lbl">Hidden fees</div></div>
-                <div className="stat"><div className="num"><span data-count="100" data-suffix="%">0%</span></div><div className="lbl">Transparent</div></div>
+                <span style={{ fontSize: 13, color: 'var(--soft)', fontWeight: 600, maxWidth: '20ch' }}>Join the waitlist to be the first to download.</span>
               </div>
             </div>
 
@@ -210,15 +309,15 @@ export default function HomePage() {
             </div>
             <div className="faq-layout">
               <div className="faq-list reveal">
-                <button className="faq-q active" data-faq="1"><span className="qn">01</span><span className="qt">Will this hurt my credit?</span></button>
-                <button className="faq-q" data-faq="2"><span className="qn">02</span><span className="qt">What if I pay late?</span></button>
-                <button className="faq-q" data-faq="3"><span className="qn">03</span><span className="qt">Is my bank info safe?</span></button>
-                <button className="faq-q" data-faq="4"><span className="qn">04</span><span className="qt">Why are the loans so small?</span></button>
-                <button className="faq-q" data-faq="5"><span className="qn">05</span><span className="qt">Who can sign up?</span></button>
-                <button className="faq-q" data-faq="6"><span className="qn">06</span><span className="qt">Are there any hidden fees?</span></button>
+                <button className="faq-q active" data-faq="6"><span className="qn">01</span><span className="qt">Are there any hidden fees?</span></button>
+                <button className="faq-q" data-faq="1"><span className="qn">02</span><span className="qt">Will this hurt my credit?</span></button>
+                <button className="faq-q" data-faq="2"><span className="qn">03</span><span className="qt">What if I pay late?</span></button>
+                <button className="faq-q" data-faq="3"><span className="qn">04</span><span className="qt">Is my bank info safe?</span></button>
+                <button className="faq-q" data-faq="4"><span className="qn">05</span><span className="qt">Why are the loans so small?</span></button>
+                <button className="faq-q" data-faq="5"><span className="qn">06</span><span className="qt">Who can sign up?</span></button>
               </div>
               <div className="faq-answer reveal" data-d="1">
-                <div className="faq-panel show" data-panel="1">
+                <div className="faq-panel" data-panel="1">
                   <span className="eyebrow red">Credit</span>
                   <h3>No hard pull. Ever.</h3>
                   <p>We don&apos;t run a hard credit check, so applying never dings your score. We verify you&apos;re a student and look at your linked account — that&apos;s it. Pay on time and we report the good history, which can actually help you build credit.</p>
@@ -243,7 +342,7 @@ export default function HomePage() {
                   <h3>Enrolled Texas students.</h3>
                   <p>You need a valid .edu email from a participating Texas school, a U.S. checking account, and to be 18 or older. We&apos;re onboarding schools one at a time — join the waitlist and we&apos;ll tell you the day KashKit opens at yours.</p>
                 </div>
-                <div className="faq-panel" data-panel="6">
+                <div className="faq-panel show" data-panel="6">
                   <span className="eyebrow emerald">Fees</span>
                   <h3>None. Every charge is in writing.</h3>
                   <p>The only charges you&apos;ll ever pay are the acquisition fee — <b>$5</b> on a $25 loan, <b>$6.25</b> on a $50 loan, <b>$12.50</b> on a $100 loan — and, for single-payment loans only, a flat <b>$1</b> interest charge. No handling fees, no monthly maintenance, no processing fees, no prepayment penalty. Every dollar is disclosed in your TILA statement before you sign, as required by <b>Texas Finance Code Chapter 342, Subchapter F (§§ 342.252–342.256)</b>. If you miss a payment, the only added cost is a 5% late fee on that scheduled payment after a 10-day grace period (§ 342.259).</p>

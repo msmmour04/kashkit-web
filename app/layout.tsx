@@ -50,9 +50,75 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+/**
+ * JSON-LD structured data — Organization + FinancialService schema for Google rich results.
+ * Lets Google show a knowledge panel (license, address, contact) and tie KashKit to
+ * Mak & Brothers Development LLC as the legal entity. Lives in <head> via Next.js.
+ */
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://kashkit.us/#org',
+      name: 'KashKit',
+      legalName: 'Mak & Brothers Development LLC',
+      alternateName: 'Mak & Brothers Development LLC',
+      url: 'https://kashkit.us',
+      logo: 'https://kashkit.us/kashkit-mark.png',
+      foundingDate: '2026',
+      foundingLocation: {
+        '@type': 'Place',
+        name: 'San Antonio, Texas, USA',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'San Antonio',
+        addressRegion: 'TX',
+        addressCountry: 'US',
+      },
+      contactPoint: [
+        { '@type': 'ContactPoint', contactType: 'customer support', email: 'support@kashkit.us', availableLanguage: ['English'] },
+        { '@type': 'ContactPoint', contactType: 'legal', email: 'legal@kashkit.us', availableLanguage: ['English'] },
+        { '@type': 'ContactPoint', contactType: 'press', email: 'press@kashkit.us', availableLanguage: ['English'] },
+      ],
+      identifier: [
+        { '@type': 'PropertyValue', propertyID: 'NMLS', value: '2780724' },
+        { '@type': 'PropertyValue', propertyID: 'OCCC', value: '2780724' },
+      ],
+    },
+    {
+      '@type': 'FinancialService',
+      '@id': 'https://kashkit.us/#service',
+      name: 'KashKit Student Microloans',
+      provider: { '@id': 'https://kashkit.us/#org' },
+      areaServed: { '@type': 'State', name: 'Texas' },
+      url: 'https://kashkit.us',
+      description: 'Texas-licensed small consumer loans of $25, $50, and $100 for verified college students.',
+      openingHours: 'Mo-Fr 09:00-18:00',
+      currenciesAccepted: 'USD',
+      paymentAccepted: 'ACH, Debit Card',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://kashkit.us/#website',
+      url: 'https://kashkit.us',
+      name: 'KashKit',
+      publisher: { '@id': 'https://kashkit.us/#org' },
+      inLanguage: 'en-US',
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${instrumentSerif.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
