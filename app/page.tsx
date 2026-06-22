@@ -109,8 +109,8 @@ export default function HomePage() {
             <span className="eyebrow red schools-eyebrow">Schools onboarding</span>
             <div className="marquee">
               <div className="marquee-track">
-                <span className="school-pill utsa-home">UTSA</span>
                 <span className="school-pill" style={{ background: 'var(--ink)', color: '#fff' }}>Texas A&amp;M</span>
+                <span className="school-pill utsa-home">UTSA</span>
                 <span className="school-pill" style={{ background: '#FCEFD6', color: 'var(--amber-deep)' }}>UT Austin</span>
                 <span className="school-pill" style={{ background: '#D7F2E7', color: 'var(--emerald-deep)' }}>Rice</span>
                 <span className="school-pill" style={{ background: '#fff', color: 'var(--ink)', boxShadow: 'inset 0 0 0 1px var(--hairline)' }}>SMU</span>
