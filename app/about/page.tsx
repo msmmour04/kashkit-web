@@ -113,7 +113,7 @@ export default function AboutPage() {
               </div>
               <div className="timeline-item reveal" data-d="3">
                 <div className="t-when">May 2026</div>
-                <h3>OCCC License #2780724 issued.</h3>
+                <h3>Texas OCCC Regulated Lender license issued.</h3>
                 <p>Approved by the Texas Office of Consumer Credit Commissioner. NMLS #2780724 active in the national registry. Compliance review done, regulator notices wired into every borrower-facing screen.</p>
               </div>
               <div className="timeline-item future reveal" data-d="3">
@@ -179,8 +179,8 @@ export default function AboutPage() {
               </div>
               <div className="compliance-fact reveal" data-d="2">
                 <div className="c-eyebrow">Texas OCCC license</div>
-                <div className="c-value">#2780724</div>
-                <div className="c-sub">Office of Consumer Credit Commissioner</div>
+                <div className="c-value">Regulated Lender</div>
+                <div className="c-sub">Office of Consumer Credit Commissioner · NMLS #2780724</div>
               </div>
               <div className="compliance-fact reveal" data-d="3">
                 <div className="c-eyebrow">NMLS registration</div>

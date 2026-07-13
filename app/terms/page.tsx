@@ -19,20 +19,16 @@ export default function TermsPage() {
             <div className="legal-eyebrow">Terms of Service</div>
             <h1>The fine print, in plain English.</h1>
             <div className="legal-meta">
-              <span>Last updated: <b>June 9, 2026</b></span>
+              <span>Effective: <b>July 13, 2026</b></span>
               <span>Effective: <b>Pending launch</b></span>
-            </div>
-
-            <div className="draft-banner">
-              <b>Draft — pending attorney review.</b> This is a working template for the KashKit Terms of Service. It is not legally binding and has not been reviewed by counsel. Final terms will be posted before any loan is originated.
             </div>
 
             <h2>1. Who we are</h2>
             <p>
               KashKit is a marketing name for <b>Mak &amp; Brothers Development LLC</b>, a Texas limited
-              liability company licensed by the Texas Office of Consumer Credit Commissioner under OCCC
-              License #2780724 and registered with the Nationwide Multistate Licensing System under NMLS
-              #2780724. Our address is San Antonio, Texas. Contact: <a href="mailto:support@kashkit.us">support@kashkit.us</a>.
+              liability company licensed by the Texas Office of Consumer Credit Commissioner as a
+              Regulated Lender, NMLS #2780724. Our mailing address is 14 Carriage Hills Dr, San
+              Antonio, TX 78257. Contact: <a href="mailto:support@kashkit.us">support@kashkit.us</a>.
             </p>
 
             <h2>2. Eligibility</h2>

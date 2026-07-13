@@ -296,7 +296,7 @@ export default function HomePage() {
                 <div className="product-foot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Unlocked after on-time history</div>
               </article>
             </div>
-            <p className="tila">Example: borrow $100, repay $113.50 in 30 days. Acquisition fee + $1 flat interest. Late fee is 5% of the scheduled payment after a 10-day grace period — never a flat charge. NMLS #2780724 · OCCC #2780724.</p>
+            <p className="tila">Example: borrow $100, repay $113.50 in 30 days. Acquisition fee + $1 flat interest. Late fee is 5% of the scheduled payment after a 10-day grace period — never a flat charge. Texas OCCC Regulated Lender · NMLS #2780724.</p>
           </div>
         </section>
 
@@ -384,7 +384,7 @@ export default function HomePage() {
               <span className="it"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mon–Fri · 9am–6pm CT</span>
               <span className="it"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>San Antonio, TX</span>
               <span className="it"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>NMLS #2780724</span>
-              <span className="it"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>OCCC #2780724</span>
+              <span className="it"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>OCCC Regulated Lender</span>
             </div>
 
             <div className="contact-form-wrap reveal">

@@ -19,23 +19,17 @@ export default function OcccNoticePage() {
             <div className="legal-eyebrow">OCCC Notice</div>
             <h1>Texas consumer complaint notice.</h1>
             <div className="legal-meta">
-              <span>OCCC License: <b>#2780724</b></span>
+              <span>Texas OCCC <b>Regulated Lender</b></span>
               <span>NMLS: <b>#2780724</b></span>
-              <span>Last updated: <b>June 9, 2026</b></span>
-            </div>
-
-            <div className="draft-banner">
-              <b>Draft — pending attorney review.</b> The contact information below is the official Texas
-              OCCC consumer complaint information and is included verbatim. The surrounding language is
-              draft and pending counsel review.
+              <span>Last updated: <b>July 13, 2026</b></span>
             </div>
 
             <h2>About this notice</h2>
             <p>
               KashKit is operated by <b>Mak &amp; Brothers Development LLC</b>, a Texas limited liability
               company licensed and examined by the State of Texas Office of Consumer Credit Commissioner
-              (OCCC) under license number <b>#2780724</b>. As a Texas-licensed lender, we are required to
-              provide consumers with the following complaint notice.
+              (OCCC) as a Regulated Lender, identified by NMLS <b>#2780724</b>. As a Texas-licensed
+              lender, we are required to provide consumers with the following complaint notice.
             </p>
 
             <h2>How to file a complaint about KashKit</h2>
@@ -65,7 +59,7 @@ export default function OcccNoticePage() {
             <ul>
               <li>Your name and the best way to reach you.</li>
               <li>The name of the business: KashKit (Mak &amp; Brothers Development LLC).</li>
-              <li>Our OCCC license number: #2780724.</li>
+              <li>Our NMLS ID: #2780724.</li>
               <li>A short description of what happened and what resolution you&apos;re seeking.</li>
               <li>Copies of any relevant documents, communications, or receipts.</li>
             </ul>

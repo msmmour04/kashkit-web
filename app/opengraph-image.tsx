@@ -79,7 +79,7 @@ export default async function Image() {
 
         {/* Compliance footer */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#8A867E', fontSize: 20, fontWeight: 700 }}>
-          <div style={{ display: 'flex' }}>NMLS #2780724 · OCCC #2780724 · San Antonio, TX</div>
+          <div style={{ display: 'flex' }}>Texas OCCC Regulated Lender · NMLS #2780724 · San Antonio, TX</div>
           <div style={{ display: 'flex' }}>kashkit.us</div>
         </div>
       </div>

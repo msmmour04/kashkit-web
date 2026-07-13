@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="wrap footer-bottom">
-          KashKit is a DBA of Mak &amp; Brothers Development LLC · NMLS #2780724 · OCCC License #2780724 · San Antonio, TX · © 2026
+          KashKit is a DBA of Mak &amp; Brothers Development LLC · Texas OCCC Regulated Lender · NMLS #2780724 · San Antonio, TX · © 2026
         </div>
       </footer>
     </>

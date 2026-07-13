@@ -73,8 +73,10 @@ const orgJsonLd = {
       },
       address: {
         '@type': 'PostalAddress',
+        streetAddress: '14 Carriage Hills Dr',
         addressLocality: 'San Antonio',
         addressRegion: 'TX',
+        postalCode: '78257',
         addressCountry: 'US',
       },
       contactPoint: [
@@ -84,7 +86,6 @@ const orgJsonLd = {
       ],
       identifier: [
         { '@type': 'PropertyValue', propertyID: 'NMLS', value: '2780724' },
-        { '@type': 'PropertyValue', propertyID: 'OCCC', value: '2780724' },
       ],
     },
     {

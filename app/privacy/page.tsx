@@ -19,20 +19,14 @@ export default function PrivacyPage() {
             <div className="legal-eyebrow">Privacy Policy</div>
             <h1>What we collect, why, and what you control.</h1>
             <div className="legal-meta">
-              <span>Last updated: <b>June 9, 2026</b></span>
-              <span>Effective: <b>Pending launch</b></span>
-            </div>
-
-            <div className="draft-banner">
-              <b>Draft — pending attorney review.</b> This is a working template for the KashKit Privacy
-              Policy. It is not legally binding and has not been reviewed by counsel. Final terms will be
-              posted before any loan is originated.
+              <span>Effective: <b>July 13, 2026</b></span>
             </div>
 
             <h2>1. Who we are</h2>
             <p>
-              KashKit is operated by <b>Mak &amp; Brothers Development LLC</b>, a Texas LLC headquartered
-              in San Antonio, TX. For privacy questions, email <a href="mailto:legal@kashkit.us">legal@kashkit.us</a>.
+              KashKit is operated by <b>Mak &amp; Brothers Development LLC</b>, a Texas LLC. Our mailing
+              address is 14 Carriage Hills Dr, San Antonio, TX 78257. For privacy questions, email{' '}
+              <a href="mailto:legal@kashkit.us">legal@kashkit.us</a>.
             </p>
 
             <h2>2. What we collect</h2>
