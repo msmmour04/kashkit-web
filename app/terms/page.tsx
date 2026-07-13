@@ -5,7 +5,7 @@ import { ClientScripts } from '@/components/site/ClientScripts';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'KashKit terms of service. Draft pending attorney review.',
+  description: 'KashKit terms of service. Effective July 13, 2026.',
   robots: { index: false, follow: true },
 };
 
@@ -20,7 +20,6 @@ export default function TermsPage() {
             <h1>The fine print, in plain English.</h1>
             <div className="legal-meta">
               <span>Effective: <b>July 13, 2026</b></span>
-              <span>Effective: <b>Pending launch</b></span>
             </div>
 
             <h2>1. Who we are</h2>

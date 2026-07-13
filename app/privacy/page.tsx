@@ -5,7 +5,7 @@ import { ClientScripts } from '@/components/site/ClientScripts';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'KashKit privacy policy. Draft pending attorney review.',
+  description: 'KashKit privacy policy. Effective July 13, 2026.',
   robots: { index: false, follow: true },
 };
 
