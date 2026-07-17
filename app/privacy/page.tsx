@@ -32,9 +32,8 @@ export default function PrivacyPage() {
             <h2>2. What we collect</h2>
             <h3>From you</h3>
             <ul>
-              <li>Your name, email address (school <code>.edu</code> and personal), phone number, date of birth, and Social Security Number.</li>
+              <li>Your name, email address (school <code>.edu</code> and personal), phone number, date of birth, and mailing address.</li>
               <li>School verification: enrollment status, school name, and a photo of your student ID.</li>
-              <li>Identity verification: a government-issued ID photo and a selfie used for liveness checks.</li>
             </ul>
             <h3>From your bank</h3>
             <ul>
