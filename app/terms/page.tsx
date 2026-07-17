@@ -36,7 +36,7 @@ export default function TermsPage() {
               <li>Be at least 18 years old.</li>
               <li>Be enrolled at a participating Texas college or university and have a valid <code>.edu</code> email address from that school.</li>
               <li>Have a U.S. checking account at a bank we support, in your name.</li>
-              <li>Be a U.S. resident with a valid Social Security Number.</li>
+              <li>Be a U.S. resident.</li>
             </ul>
 
             <h2>3. Loan products</h2>
